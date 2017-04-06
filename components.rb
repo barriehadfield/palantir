@@ -1,8 +1,10 @@
 class TopLevelComponent < Hyperloop::Component
   render(DIV) do
-    h1 { "Hello here now" }
+    h1 { "Time to Compare" }
     FileChooser()
     CompareButton()
+    ChangeTree()
+    ComparisonDocument()
   end
 end
 
@@ -27,5 +29,17 @@ class CompareButton < Hyperloop::Component
       puts "about to compare"
       `window.startComparison('comparison-document', 'changes-tree');`
     end
+  end
+end
+
+class ChangeTree < Hyperloop::Component
+  render do
+    div(id: 'changes-tree')
+  end
+end
+
+class ComparisonDocument < Hyperloop::Component
+  render do
+    div(id: 'comparison-document')
   end
 end
