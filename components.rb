@@ -1,7 +1,7 @@
 class TopLevelComponent < Hyperloop::Component
   render do
     div.container {
-      h1 { "Time to Compare" }
+      h1 { "Nick's Compare Anywhere!" }
       FileChooser()
       br
       CompareButton()
@@ -13,8 +13,6 @@ class TopLevelComponent < Hyperloop::Component
     }
   end
 end
-
-
 
 class FileChooser < Hyperloop::Component
   render do
