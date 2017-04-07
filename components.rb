@@ -1,7 +1,8 @@
 class TopLevelComponent < Hyperloop::Component
   render do
     div.container {
-      h1 { "Nick's Compare Anywhere!" }
+      br
+      h1 { "Compare Anywhere Sample App" }
       FileChooser()
       br
       CompareButton()
